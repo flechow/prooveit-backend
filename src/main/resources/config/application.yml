@@ -1,0 +1,15 @@
+db:
+  host: localhost
+  port: 5432
+  name: proovit
+  user: postgres
+  pass: example
+
+
+spring:
+  jackson.serialization.write-dates-as-timestamps: false
+  datasource:
+    url: jdbc:postgresql://${db.host}:${db.port}/${db.name}
+    username: ${db.user}
+    password: ${db.pass}
+    driver-class-name: org.postgresql.Driver
